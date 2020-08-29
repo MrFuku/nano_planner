@@ -17,7 +17,16 @@
   </head>
 
   <body>
-    <%= render @view_module, @view_template, assigns %>
+    <header>
+      <h1><%= link "NanoPlanner", to: top_path(@conn, :index, []) %>
+    </header>
+    <main>
+      <%= render @view_module, @view_template, assigns %>
+    </main>
+    <footer>
+      &copy: 2017 Oiax Inc.
+    </footer>
+    <%= content_tag :script, "", src: static_path(@conn, "/js/app.js") %>
     <%= content_tag :script, "", src: static_path(@conn, "/js/app.js") %>
   </body>
 </html>
