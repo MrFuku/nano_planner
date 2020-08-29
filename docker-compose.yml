@@ -1,0 +1,20 @@
+version: "3"
+services:
+  web:
+    build: .
+    command: bash
+    environment:
+      MIX_ENV: "dev"
+      PORT: "4000"
+    volumes:
+      - ./apps:/apps
+    working_dir: /apps
+    ports:
+      - "4000:4000"
+    tty: true
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_HOST=db
