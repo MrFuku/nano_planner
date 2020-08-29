@@ -10,6 +10,10 @@
     <title>NanoPlanner</title>
     <%= tag :link, rel: "stylesheet",
       href: static_path(@conn, "/css/app.css") %>
+    <%= tag :link, rel: "shortcut.icon",
+      href: static_path(@conn, "/images/nano_planner.ico") %>
+    <%= tag :link, rel: "apple-touch-icon",
+      href: static_path(@conn, "/images/clock256.png") %>
   </head>
 
   <body>
