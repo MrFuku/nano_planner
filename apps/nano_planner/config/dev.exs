@@ -54,5 +54,5 @@ config :nano_planner, NanoPlanner.Repo,
   username: "postgres",
   password: "postgres",
   database: "nano_planner_dev",
-  hostname: "localhost",
+  hostname: "db",
   pool_size: 10
