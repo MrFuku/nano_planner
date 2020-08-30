@@ -25,4 +25,8 @@ defmodule NanoPlanner.PlanItemsView do
         Strftime.format! item.ends_at, "%Y年%-m月%-d日 %H:%M"
     end
   end
+
+  def format_datetime(datetime) do
+    Strftime.format! datetime, "%Y年%-m月%-d日 %H:%M"
+  end
 end
