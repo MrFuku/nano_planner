@@ -27,5 +27,5 @@ WORKDIR /apps
 
 RUN mix local.hex --force
 RUN mix local.rebar --force
-RUN mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new-1.2.4.ez --force
+RUN mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_new-1.3.2.ez --force
 
