@@ -1,7 +1,7 @@
-defmodule NanoPlannerWeb.PageController do
+defmodule NanoPlannerWeb.TopController do
   use NanoPlannerWeb, :controller
 
   def index(conn, _params) do
-    render conn, "index.html"
+    render(conn, "index.html")
   end
 end

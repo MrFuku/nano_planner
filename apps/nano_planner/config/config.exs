@@ -12,10 +12,10 @@ config :nano_planner,
 # Configures the endpoint
 config :nano_planner, NanoPlannerWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "JUsnx6k2xYBAijODHlJ6MOhT81bA+62lvQcRethA9Lgb2uZ6YPK8SZetW6OgTd3l",
+  secret_key_base:
+    "JUsnx6k2xYBAijODHlJ6MOhT81bA+62lvQcRethA9Lgb2uZ6YPK8SZetW6OgTd3l",
   render_errors: [view: NanoPlannerWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: NanoPlanner.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: NanoPlanner.PubSub, adapter: Phoenix.PubSub.PG2]
 
 # Configures Elixir's Logger
 config :logger, :console,
@@ -28,4 +28,4 @@ config :nano_planner,
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
-import_config "#{Mix.env}.exs"
+import_config "#{Mix.env()}.exs"

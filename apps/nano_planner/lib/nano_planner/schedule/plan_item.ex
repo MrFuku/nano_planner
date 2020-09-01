@@ -5,10 +5,10 @@ defmodule NanoPlanner.Schedule.PlanItem do
   alias NanoPlanner.Schedule.PlanItem
 
   schema "plan_items" do
-    field :name, :string
-    field :description, :string
-    field :starts_at, Timex.Ecto.DateTime
-    field :ends_at, Timex.Ecto.DateTime
+    field(:name, :string)
+    field(:description, :string)
+    field(:starts_at, Timex.Ecto.DateTime)
+    field(:ends_at, Timex.Ecto.DateTime)
 
     timestamps()
   end
