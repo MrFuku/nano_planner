@@ -2,7 +2,7 @@ defmodule NanoPlanner.Schedule do
   alias NanoPlanner.Schedule.PlanItem
 
   def convert_datetime(items) when is_list(items) do
-    Enum.map items, &(convert_datetime &1)
+    Enum.map(items, &convert_datetime(&1))
   end
 
   def convert_datetime(%PlanItem{} = item) do
