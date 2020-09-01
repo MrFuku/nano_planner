@@ -33,8 +33,8 @@ defmodule NanoPlanner.PlanItemsView do
     Strftime.format! datetime, "%Y年%-m月%-d日 (#{w}) %H:%M"
   end
 
+  @weekday_names ~w(日 月 火 水 木 金 土)
   defp format_wday(datetime) do
-    Enum.at ~w(日 月 火 水 木 金 土),
-      Timex.days_to_beginning_of_week(datetime, :sun)
+    Enum.at(@weekday_names, Timex.days_to_beginning_of_week(datetime, :sun))
   end
 end
