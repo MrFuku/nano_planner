@@ -1,4 +1,4 @@
-defmodule NanoPlannerWeb.PlanItemsController do
+defmodule NanoPlannerWeb.PlanItemController do
   use NanoPlannerWeb, :controller
   alias NanoPlanner.Schedule
 
