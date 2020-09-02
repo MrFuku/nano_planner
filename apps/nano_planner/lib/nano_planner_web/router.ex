@@ -19,7 +19,7 @@ defmodule NanoPlannerWeb.Router do
     resources(
       "/plan_items",
       PlanItemController,
-      only: [:index, :new, :show]
+      only: [:index, :new, :create, :show]
     )
   end
 end
