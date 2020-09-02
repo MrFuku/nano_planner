@@ -6,12 +6,7 @@ defmodule NanoPlannerWeb.PlanItemsController do
   alias NanoPlanner.Schedule.PlanItem
 
   def index(conn, _params) do
-    plan_items =
-      PlanItem
-      |> order_by(asc: :starts_at, asc: :ends_at, asc: :id)
-      |> Repo.all()
-      |> Schedule.convert_datetime()
-
+    plan_items = Schedule.list_plan_items
     render(conn, "index.html", plan_items: plan_items)
   end
 

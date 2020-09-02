@@ -1,5 +1,14 @@
 defmodule NanoPlanner.Schedule do
+  import Ecto.Querry
+  alias NanoPlanner.Repo
   alias NanoPlanner.Schedule.PlanItem
+
+  def list_plan_items do
+    PlanItem
+    |> order_by(asc: :starts_at, asc: :ends_at, asc: :id)
+    |> Repo.all()
+    |> convert_datetime()
+  end
 
   def convert_datetime(items) when is_list(items) do
     Enum.map(items, &convert_datetime(&1))
