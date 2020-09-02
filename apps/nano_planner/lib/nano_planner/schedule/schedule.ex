@@ -1,5 +1,5 @@
 defmodule NanoPlanner.Schedule do
-  import Ecto.Querry
+  import Ecto.Query
   alias NanoPlanner.Repo
   alias NanoPlanner.Schedule.PlanItem
 
